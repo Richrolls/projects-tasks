@@ -16,13 +16,13 @@
                 {% for project in projects_list %}
                 {% if user.is_authenticated %}
                 <tr>
-                    <td>{{ project.name }}</td>
-                    <td></td>
+                    <td><a href={% url 'show_project' project.id %}> {{ project.name }}</a></td>
+                    <td>{{ project.tasks.count }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
             </tbody>
-        </table>>
+        </table>
     {% endif %}
 </div>
 {% endblock main %}
