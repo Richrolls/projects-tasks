@@ -7,11 +7,11 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required
-def projects_list(request):
+def list_projects(request):
     user = request.user
-    projects_list = Project.objects.filter(owner=user)
+    list_projects = Project.objects.filter(owner=user)
     context = {
-        "projects_list": projects_list,
+        "list_projects": list_projects,
     }
     return render(request, "projects/list.html", context)
 
