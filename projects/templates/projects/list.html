@@ -2,7 +2,7 @@
 {% block main %}
 <div>
     <h1>My Projects</h1>
-    {% if project_list.count == 0 %}
+    {% if projects_list.count == 0 %}
         <p>You are not assigned to any projects</p>
     {% else %}
         <table>
@@ -13,13 +13,16 @@
                 </tr>
             </thead>
             <tbody>
-                {% for project in project_list %}
+                {% for project in projects_list %}
+                {% if user.is_authenticated %}
                 <tr>
                     <td>{{ project.name }}</td>
                     <td></td>
                 </tr>
+                {% endif %}
                 {% endfor %}
             </tbody>
         </table>>
+    {% endif %}
 </div>
 {% endblock main %}
