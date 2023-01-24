@@ -6,6 +6,4 @@ from .models import Project
 
 @admin.register(Project)
 class ProjectCategory(admin.ModelAdmin):
-    list_display = (
-        "name",
-    )
+    list_display = ("name",)

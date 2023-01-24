@@ -20,5 +20,5 @@ class Task(models.Model):
         settings.AUTH_USER_MODEL,
         null=True,
         related_name="tasks",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
     )
