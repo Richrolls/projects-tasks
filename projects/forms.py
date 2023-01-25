@@ -5,8 +5,8 @@ from .models import Project
 class ProjectForm(ModelForm):
     class Meta:
         model = Project
-        fields = {
+        fields = (
             "name",
             "description",
             "owner",
-        }
+        )

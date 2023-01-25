@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<div>
-    <h1>Create a new task</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ task_form.as_p }}
-        <button>Create</button>
-    </form>
-</div>
+    <div>
+        <h1>Create a new task</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ task_form.as_p }}
+            <button>Create</button>
+        </form>
+    </div>
 {% endblock main %}
